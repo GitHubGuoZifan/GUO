@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+</head>
+<body>
+    <h3 style="color: red">{{ msg }}</h3>
+    <form action="{% url 'sunday:userlogin' %}" method="post">
+        {% csrf_token %}
+        登录用户名：<input type="text" name="logname"/><br/>
+        登陆密码：<input type="password" name="logpwd"/><br/>
+        <input type="submit" value="登陆"/>
+    </form>
+</body>
+</html>

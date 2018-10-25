@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示</title>
+</head>
+<body>
+    <form action="{% url 'sunday:show' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="查询">
+        {% for stu in students %}
+            <tr>
+                编号：<td>{{ stu.id }}</td><br/>
+                姓名：<td>{{ stu.name }}</td><br/>
+                年龄：<td>{{ stu.age }}</td><br/>
+                性别：<td>{{ stu.sex }}</td><br/>
+                成绩：<td>{{ stu.price }}</td><br/>
+            </tr>
+        {% endfor %}
+    </form>
+</body>
+</html>

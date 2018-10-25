@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ regform.as_p }}
+    </form>
+</body>
+</html>

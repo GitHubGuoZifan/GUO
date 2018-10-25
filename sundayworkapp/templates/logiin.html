@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>logiin</title>
+    <script type="text/javascript">
+        function register() {
+            window.location.href='register'
+        }
+    </script>
+</head>
+<body>
+    <h1>Login</h1>
+        {% for item in error %}
+            <p style="color: red">{{ iteam }}</p>
+        {% endfor %}
+    <form action="" method="post">
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Login">
+        <input type="button" value="Register" onclick="register()">
+    </form>
+</body>
+</html>
